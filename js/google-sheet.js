@@ -1,3 +1,5 @@
+// https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175
+
 // Variable to hold request
 var request;
 // Bind to the submit event of our form
@@ -22,7 +24,7 @@ $("#submit-to-google-sheet").submit(function(event){
 
     // Fire off the request to /form.php
     request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbwGLEQFoKH3q9FuElNhNWeV9SjomlOTF7KXDeNCT2IImuhgD1g/exec",
+        url: "https://script.google.com/macros/s/AKfycbyusaxv27k4LEHR0lGODdqG2eXdLwa8O_kf_0MCpvtH16O0Fqs/exec",
         type: "post",
         data: serializedData
     });

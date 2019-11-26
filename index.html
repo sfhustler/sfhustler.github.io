@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147192936-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-147192936-1');
-    </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153427312-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153427312-1');
+</script>
+
     <title>VisualOne</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -347,6 +349,13 @@
                   <input type="subject" id="subject" class="form-control rounded-0" name="phone_number">
                 </div>
               </div>
+
+              <div class="row form-group">  
+                <div class="col-md-10">
+                  <label class="text-black" for="subject">How did you hear about us?</label> 
+                  <input type="text" id="refer" class="form-control rounded-0" name="referral">
+                </div>
+              </div>
               <br>
 
               <div class="row form-group">
@@ -406,7 +415,7 @@
           <div class="col-md-12">
             <p class="mb-0">
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy; VisualOne <script>document.write(new Date().getFullYear());</script> All rights reserved.
+              Copyright &copy; Visual One <script>document.write(new Date().getFullYear());</script> All rights reserved.
 
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
@@ -435,6 +444,23 @@
   <script src="js/jquery.sticky.js"></script>
   <script src="js/google-sheet.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- <script type="text/javascript">
+    var $form = $('form#submit-to-google-sheet'),
+    url = 'https://script.google.com/macros/s/AKfycbyusaxv27k4LEHR0lGODdqG2eXdLwa8O_kf_0MCpvtH16O0Fqs/exec'
+
+    $('#submit-form').on('click', function(e) {
+      e.preventDefault();
+      var jqxhr = $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: $form.serializeObject()
+      }).success(
+        // do something
+      );
+    })
+  </script> -->
     
   </body>
 </html>
