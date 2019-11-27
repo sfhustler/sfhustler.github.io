@@ -1,4 +1,6 @@
 // https://medium.com/@dmccoy/how-to-submit-an-html-form-to-google-sheets-without-google-forms-b833952cc175
+//https://railsrescue.com/blog/2015-05-28-step-by-step-setup-to-send-form-data-to-google-sheets/
+
 
 // Variable to hold request
 var request;
@@ -25,13 +27,16 @@ $("#submit-to-google-sheet").submit(function(event){
     // Fire off the request to /form.php
     request = $.ajax({
         url: "https://script.google.com/macros/s/AKfycbyusaxv27k4LEHR0lGODdqG2eXdLwa8O_kf_0MCpvtH16O0Fqs/exec",
-        type: "post",
+        type: "get",
         data: serializedData
     });
 
     // Callback handler that will be called on success
     request.done(function (response, textStatus, jqXHR){
         $form[0].reset(); // Clear the form
+
+        $('#myResultDiv').text("Your info was submitted. We will be in touch shortly. Thank you!");
+
         // Log a message to the console
         console.log("Hooray, it worked!");
         console.log(response);
@@ -42,6 +47,9 @@ $("#submit-to-google-sheet").submit(function(event){
     // Callback handler that will be called on failure
     request.fail(function (jqXHR, textStatus, errorThrown){
         $form[0].reset();
+
+        $('#myResultDiv').text("Submission Failed. Please, try again.");
+
         // Log the error to the console
         console.error(
             "The following error occurred: "+

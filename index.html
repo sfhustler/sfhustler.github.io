@@ -100,7 +100,7 @@
             <div class="row mb-4">
               <div class="col-lg-5 col-sm-5 mr-auto">
                 <h1>Smart Rental Property Monitor</h1></br>
-                <p class="mb-5">Create custom alerts. Get notified for things that matter to you. No more need to check camera feeds frequently.</p>
+                <p class="mb-5">Create custom alerts.<br>Get notified for things that matter to you.<br>No more need to check camera feeds frequently.</p>
                 <div>
                   <a href="#why-section" class="btn btn-primary mr-2 mb-2">Learn More</a>
                 </div>
@@ -130,8 +130,8 @@
                 <span class="icon-wrap"><span class="text-primary icon-people"></span></span>
               </div>
               <div>
-                <h3>Max Capacity Violated</h3>
-                <p>Set a max capacity, get an alert when more people are detected.</p>
+                <h3>Max Occupancy Violated</h3>
+                <p>Set a max occupancy, get an alert when more people are detected.</p>
               </div>
             </div>
           </div>
@@ -157,7 +157,7 @@
               </div>
               <div>
                 <h3>Car Parked in Wrong Location</h3>
-                <p>Set improper zone and get an alert when a car is parked improperly.</p>
+                <p>Set improper zones, get an alert when a car is parked improperly.</p>
               </div>
             </div>
           </div>
@@ -327,7 +327,7 @@
 
             <form id="submit-to-google-sheet" action="#" class="p-5 bg-white" onsubmit="this.elements['timestamp'].value= new Date()">
               
-              <h2 class="h4 text-black mb-5">Submit your  info. We'll be in touch shortly.</h2> 
+              <!-- <h2 class="h4 text-black mb-5">Submit your contact info. We'll be in touch shortly.</h2>  -->
               <input name="timestamp" type="hidden">
               <div class="row form-group">
                 <div class="col-md-8 mb-3 mb-md-0">
@@ -364,6 +364,8 @@
                   <input type="submit" value="Submit" id="#submit-form" class="btn btn-primary mr-2 mb-2">
                 </div>
               </div>
+
+              <div id="myResultDiv"></div>
 
             </form>
           </div>
@@ -415,7 +417,7 @@
           <div class="col-md-12">
             <p class="mb-0">
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy; Visual One <script>document.write(new Date().getFullYear());</script> All rights reserved.
+              Copyright &copy;Visual One <script>document.write(new Date().getFullYear());</script>. All rights reserved.
 
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
@@ -442,6 +444,7 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/google-sheet.js"></script>
   <script src="js/main.js"></script>
 
