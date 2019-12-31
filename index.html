@@ -361,12 +361,20 @@
                   <!-- <button type="submit" id="#submit-form" class="btn btn-primary mr-2 mb-2">Submit</button> -->
                   <input type="submit" value="Submit" id="#submit-form" class="btn btn-primary mr-2 mb-2">
                 </div>
+
+                <input id="order" type="button" value="Order Now!" onclick="goToCheckOut();" />
+
+                <input id="paybtn" type="button" value="Pay now!" />
+
               </div>
 
               <div id="myResultDiv"></div>
 
             </form>
+
           </div>
+
+
         
         </div>
         
@@ -429,6 +437,8 @@
     
   </div> <!-- .site-wrap -->
 
+  <script src="https://js.stripe.com/v3/"></script>
+
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/jquery-ui.js"></script>
@@ -442,9 +452,141 @@
   <script src="js/aos.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
   <script src="js/google-sheet.js"></script>
   <script src="js/main.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script>
+
+    // $(document).ready(function(){
+    //   $("#paybtn").click(function(){
+    //     $.get("http://34.219.246.91:8081/test?test=4", function(data, status){
+    //       alert("Data: " + data + "\nStatus: " + status);
+    //     });
+    //   });
+    // });
+
+
+
+    //     var HttpClient = function() {
+    // this.get = function(aUrl, aCallback) {
+    //     var anHttpRequest = new XMLHttpRequest();
+    //     anHttpRequest.onreadystatechange = function() { 
+    //         if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+    //             aCallback(anHttpRequest.responseText);
+    //     }
+
+    //     anHttpRequest.open( "GET", aUrl, true );            
+    //     anHttpRequest.send( null );
+    //   }
+    // }
+
+    // var client = new HttpClient();
+    // client.get('http://34.219.246.91:8081/stripe?test=3', function(response) {
+    //     // do something with response
+    //     alert(response)
+    // });
+
+
+
+
+  function goToCheckOut() {
+
+
+
+
+
+    // window.location.replace("http://www.w3schools.com");
+
+
+    // $.ajax({
+    //   url: "http://34.219.246.91:8081/stripe?test=3",
+    //   // beforeSend: function(xhr) { 
+    //   //   xhr.setRequestHeader("Authorization", "Basic " + btoa("username:password")); 
+    //   // },
+    //   type: 'GET',
+    //   // dataType: 'json',
+    //   // contentType: 'application/json',
+    //   // processData: false,
+    //   // data: '{"foo":"bar"}',
+    //   success: function (data) {
+    //     alert(data);
+    //   },
+    //   error: function(){
+    //     alert("Cannot get data");
+    //   }
+    // });
+
+
+    // $.ajax({
+    //     type: "GET",
+    //     url: "http://34.219.246.91:8081/stripe",
+    //     crossDomain: true,
+    //     data: 'param1=value1&param2=value2',
+    //     success: function (data) {
+    //         // do something with server response data
+    //         alert(data);
+    //     },
+    //     error: function (err) {
+    //         // handle your error logic here
+    //         alert("Cannot get data " + err);
+    //     }
+    // });
+
+
+
+    $.get("http://34.219.246.91:8081/stripe?test=2", function(data, status){
+      alert("Data: " + data + "\nStatus: " + status);
+      console.log(data)
+
+
+      var stripe = Stripe('pk_live_9ol1fkJG7ysE8jOKUmA8HwAt006Q4ZOvuQ');
+
+      stripe.redirectToCheckout({
+      // Make the id field from the Checkout Session creation API response
+      // available to this file, so you can provide it as parameter here
+      // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+      sessionId: data
+      }).then(function (result) {
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer
+        // using `result.error.message`.
+      });
+    });
+
+
+    // var xmlHttp = new XMLHttpRequest();
+    // xmlHttp.open( "GET", "http://www.yahoo.com", true ); // false for synchronous request
+    // xmlHttp.send( null );
+
+    // alert(xmlHttp.responseText);
+
+    // alert("testing");
+
+    // alert(session_id);
+
+
+
+      // var stripe = Stripe('pk_live_9ol1fkJG7ysE8jOKUmA8HwAt006Q4ZOvuQ');
+
+      // stripe.redirectToCheckout({
+      // // Make the id field from the Checkout Session creation API response
+      // // available to this file, so you can provide it as parameter here
+      // // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+      // sessionId: data
+      // }).then(function (result) {
+      //   // If `redirectToCheckout` fails due to a browser or network
+      //   // error, display the localized error message to your customer
+      //   // using `result.error.message`.
+      // });
+    
+
+
+  }
+  
+</script>
 
   <!-- <script type="text/javascript">
     var $form = $('form#submit-to-google-sheet'),
