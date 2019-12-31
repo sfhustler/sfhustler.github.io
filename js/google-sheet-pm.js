@@ -5,7 +5,7 @@
 // Variable to hold request
 var request;
 // Bind to the submit event of our form
-$("#submit-to-google-sheet").submit(function(event){
+$("#submit-to-google-sheet-pm").submit(function(event){
     // Abort any pending request
     if (request) {
         request.abort();
@@ -35,10 +35,10 @@ $("#submit-to-google-sheet").submit(function(event){
     request.done(function (response, textStatus, jqXHR){
         $form[0].reset(); // Clear the form
 
-        $('#myResultDiv').text("You will be redirected to Stripe's website for payments.");
+        $('#pmResultDiv').text("Your info was submitted. We will be in touch shortly. Thank you!");
 
         // Log a message to the console
-        // console.log("Hooray, it worked!");
+        console.log("Hooray, it worked!");
         console.log(response);
         console.log(textStatus);
         console.log(jqXHR);
@@ -48,7 +48,7 @@ $("#submit-to-google-sheet").submit(function(event){
     request.fail(function (jqXHR, textStatus, errorThrown){
         $form[0].reset();
 
-        $('#myResultDiv').text("Submission Failed. Please, try again.");
+        $('#pmResultDiv').text("Submission Failed. Please, try again.");
 
         // Log the error to the console
         console.error(

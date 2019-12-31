@@ -75,7 +75,10 @@
                 <li><a href="#why-section" class="nav-link">Features</a></li>
                 <li><a href="#how-section" class="nav-link">How it works</a></li>
                 <li><a href="#violations-section" class="nav-link">Pricing</a></li>
-                <li><a href="#contact-section" class="nav-link"><strong>Order Now!</strong></a></li>
+                <li><a href="#contact-section" class="nav-link" onclick="openForm('contact-section')"><strong>Order Now</strong></a></li> 
+                <li><a href="#about-section" class="nav-link">About Us</a></li>
+                <!-- <li><a onclick="goToCheckOut()" href="#" class="nav-link"><strong>Order Now!</strong></a></li> -->
+
               </ul>
             </nav>
           </div>
@@ -99,8 +102,8 @@
 
             <div class="row mb-4">
               <div class="col-lg-5 col-sm-5 mr-auto">
-                <h1>Smart Property Monitoring Service</h1></br>
-                <p class="mb-5">Stay aware of what happens at your property...<br>Create custom alerts, get notified for things that matter to you.<br>No need to keep checking your cameras constantly!</p>
+                <h1>Smart Property Monitoring Solution</h1></br>
+                <p class="mb-5">Stay aware of what happens at your property!<br>Create custom alerts, get notified for things that matter to you.</p>
                 <div>
                   <a href="#why-section" class="btn btn-primary mr-2 mb-2">Learn More</a>
                 </div>
@@ -117,9 +120,10 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Features</h2>
+            <h2 class="section-title mb-3">Sample Alerts</h2>
           </div>
         </div>
+
         <div class="row align-items-stretch">
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
@@ -129,7 +133,7 @@
               </div>
               <div>
                 <h3>Max Occupancy Violated</h3>
-                <p>Set a max occupancy, get an alert when more people are detected.</p>
+                <p>Get an alert when more people than your max occupancy are detected.</p>
               </div>
             </div>
           </div>
@@ -142,7 +146,7 @@
               </div>
               <div>
                 <h3>Animal Detected</h3>
-                <p>Get an alert when a dog is detected or a bear is getting into your trash.</p>
+                <p>Get an alert when a dog, a coyote or a bear is detected.</p>
               </div>
             </div>
           </div>
@@ -154,8 +158,8 @@
                 <span class="icon-wrap"><span class="text-primary icon-directions_car"></span></span>
               </div>
               <div>
-                <h3>Car Parked in Wrong Location</h3>
-                <p>Set improper zones, get an alert when a car is parked improperly.</p>
+                <h3>Parking Violated</h3>
+                <p>Get an alert when a car is parked in an undesired location.</p>
               </div>
             </div>
           </div>
@@ -167,7 +171,7 @@
                 <span class="icon-wrap"><span class="text-primary icon-face"></span></span>
               </div>
               <div>
-                <h3>Unfamiliar Face Detection</h3>
+                <h3>Unfamiliar Face Detected</h3>
                 <p>Get an alert when a stranger shows up to your property.</p>
               </div>
             </div>
@@ -175,6 +179,33 @@
 
 
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-tag_faces"></span></span>
+              </div>
+              <div>
+                <h3>Specific Person Detected</h3>
+                <p>Get an alert when a specific person shows up to your property.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-flash_on"></span></span>
+              </div>
+              <div>
+                <h3>Fire Detected</h3>
+                <p>Get an alert when a bonfire is detected on your property.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
             <div class="unit-4 d-block">
               <div class="unit-4-icon mb-3">
                 <span class="icon-wrap"><span class="text-primary icon-search"></span></span>
@@ -197,36 +228,50 @@
                 <p>Be aware of what happens at your property. Minimize impact of renting.</p>
               </div>
             </div>
-          </div>
-
-
-          <!-- <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-shopping_basket"></span></span>
-              </div>
-              <div>
-                <h3>Custom Hardware</h3>
-                <p>Our wide-angel surveillance cameras .</p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-shopping_basket"></span></span>
-              </div>
-              <div>
-                <h3>Installation On Us</h3>
-                <p>Our professionally trained crew will take care of the camera installations for you.</p>
-              </div>
-            </div>
           </div> -->
 
-
         </div>
+
+        <br>
+
+        <!-- <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">Fast Query</h2>
+          </div>
+
+           <div class="col-12 text-center">
+                <h2>Search Past Footage 10x Faster</h2>
+                Query for specific events and get the resutls instantly, e.g.
+           </div>
+        </div> -->
+
+      <div class="row justify-content-center" style="padding-top: 20px;">
+        <div class="col-lg-6  col-md-6 pr-lg-6" >
+            <h2 class="text-black">Search Past Footage 10x Faster!</h2>
+            Query for specific events and get the resutls instantly.<br>
+            e.g. Show me clips of when
+            <ul class="list-unstyled">
+              <ul>
+              <li>a truck appeared.</li>
+              <li>a stranger was detected.</li>
+              <li>a dog was detected.</li>
+              <li>a bicycle disappeared.</li>
+              <!-- <li>No outlets available? No problem! Our cameras work with rechargable batteries.</li><br> -->
+            </ul>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- <div class="row mb-5" style="padding-top: 20px;">
+          <div class="col-12 text-center">
+            <a href="#how-section">
+            <p class="mb-4"><h5>Be aware of what happens at your property.</h5>
+            <h5>Be a Good Neighbor!</h5></p>
+          </a>
+          </div>
+        </div> -->
+
       </div>
     </div>
 
@@ -235,7 +280,6 @@
     
     <div class="feature-big">
       <div class="container">
-
 
         <div class="mt-5 row mb-5 site-section border-bottom" id="how-section">
           <div class="col-lg-7 order-1 order-lg-2">
@@ -246,7 +290,7 @@
             <ul class="list-unstyled">
               <ul>
               <li>We will send you a camera to install outside your property.</li><br>
-              <li>Create custom alerts in the mobile app for things that matter to you.</li><br>
+              <li>You can create smart custom alerts in the mobile app for things that matter to you.</li><br>
               <li>Our proprietry algorithms process the video feed in real time and notify you as soon as any of the events you care about occurs.</li><br>
               <!-- <li>No outlets available? No problem! Our cameras work with rechargable batteries.</li><br> -->
             </ul>
@@ -256,12 +300,12 @@
 
 
         <div class="row mb-5 site-section " id="violations-section">
-          <div class="col-lg-7">
-            <img src="images/cost.png" alt="Image" class="img-fluid">
+          <div class="col-lg-6">
+            <img src="images/price.png" alt="Image" class="img-fluid">
           </div>
-          <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
+          <div class="col-lg-6 pl-lg-6 ml-auto mt-md-6">
             <h2 class="text-black">Pricing</h2>
-            <p class="mb-4"><h3>Only $20/month per camera!</h3></p>
+            <p class="mb-4"><h3>Only $19.99/month per camera!</h3></p>
             <ul class="ul-check mb-5 list-unstyled success">
               <li>Initial cost: $0</li>
               <li>Camera included.</li>
@@ -269,10 +313,21 @@
               <li>No commitment. Cancel anytime.</li>
               <!-- <li>Volume discount available.</li> -->
             </ul>
-          </div>
-        </div>
 
-        
+            <input type="submit" value="Order Now!" id="open_order_form" onclick="openForm('contact-section');" class="btn btn-primary mr-2 mb-2" style="display: block;">
+
+          </div>
+
+
+          <div class="col-md-12" align="center" style="padding-top: 50px;">
+              Volume discounts available.<br>
+              <font size="5" style="font-weight:bold;">Are you a property manager?</font><br>
+              <font size="4" style="font-weight:bold;">
+                <a href="#pm-form-section" onclick="openForm('pm-form-section')">Request a quote/demo today!</a>
+              </font>
+            </div>
+
+        </div>
 
       </div>
     </div>
@@ -310,61 +365,98 @@
         </div>
     </div> -->
 
-    <div class="site-section bg-light" id="contact-section">
+    <div class="site-section bg-light border-bottom" id="contact-section">
       <div class="container">
-        <div class="row mb-5">
+
+
+        <!-- <div class="row mb-5">
           <div class="col-12 text-center">
             <h1 class="section-title mb-3">Order Now!</h1>
-            Submit your contact info and we will be in touch shortly.
+            Payments processed through Stripe.
           </div>
-        </div>
+        </div> -->
+
+
         <div class="row justify-content-center">
           <div class="col-lg-7 mb-5">
-
-            
 
             <form id="submit-to-google-sheet" action="#" class="p-5 bg-white" onsubmit="this.elements['timestamp'].value= new Date()">
               
               <!-- <h2 class="h4 text-black mb-5">Submit your contact info. We'll be in touch shortly.</h2>  -->
               <input name="timestamp" type="hidden">
+              <!-- <input name="full_name" type="hidden">
+              <input name="phone_number" type="hidden"> -->
               <div class="row form-group">
-                <div class="col-md-8 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">Name</label>
-                  <input type="text" id="fname" class="form-control rounded-0" name="full_name">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="firstname" class="form-control rounded-0" name="first_name">
                 </div>
+
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">Last Name</label>
+                  <input type="text" id="firstname" class="form-control rounded-0" name="last_name">
+                </div>
+
               </div>
 
               <div class="row form-group">
-                <div class="col-md-10">
+                <div class="col-md-12">
                   <label class="text-black" for="email">Email</label> 
                   <input type="email" id="email" class="form-control rounded-0" name="email">
                 </div>
               </div>
 
-              <div class="row form-group">  
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="address">Mailing Address</label> 
+                  <input type="text" id="address" class="form-control rounded-0" name="address">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-6">
+                  <label class="text-black" for="city">City</label> 
+                  <input type="text" id="city" class="form-control rounded-0" name="city">
+                </div>
+
+                <div class="col-md-2">
+                  <label class="text-black" for="state">State</label> 
+                  <input type="text" id="state" class="form-control rounded-0" name="state">
+                </div>
+
+                <div class="col-md-4">
+                  <label class="text-black" for="zip">Zip Code</label> 
+                  <input type="text" id="zip" class="form-control rounded-0" name="zip">
+                </div>
+
+              </div>
+
+              <!-- <div class="row form-group">  
                 <div class="col-md-10">
                   <label class="text-black" for="subject">Phone Number</label> 
                   <input type="subject" id="subject" class="form-control rounded-0" name="phone_number">
                 </div>
-              </div>
+              </div> -->
 
               <div class="row form-group">  
-                <div class="col-md-10">
-                  <label class="text-black" for="subject">How did you hear about us?</label> 
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Promo Code (if you have one)</label> 
                   <input type="text" id="refer" class="form-control rounded-0" name="referral">
                 </div>
               </div>
               <br>
 
               <div class="row form-group">
-                <div class="col-md-12">
-                  <!-- <button type="submit" id="#submit-form" class="btn btn-primary mr-2 mb-2">Submit</button> -->
-                  <input type="submit" value="Submit" id="#submit-form" class="btn btn-primary mr-2 mb-2">
-                </div>
-<!-- 
-                <input id="order" type="button" value="Order Now!" onclick="goToCheckOut();" />
 
-                <input id="paybtn" type="button" value="Pay now!" /> -->
+                <div class="col-md-4">
+                  <input type="submit" value="Next" id="#submit-form" onclick="goToCheckOut();" class="btn btn-primary mr-2 mb-2">
+                  <!-- <div align="right"><font size="2">Payments processed through Stripe.</font></div> -->
+                </div>
+
+                <div class="col-md-8" align="right">
+                  <br><font size="3">Payments processed by <a href="http://www.stripe.com" >Stripe</a>.</font>
+                </div>
 
               </div>
 
@@ -373,15 +465,74 @@
             </form>
 
           </div>
-
-
         
         </div>
         
       </div>
     </div>
 
-        <!-- <div class="site-section bg-light" id="about-section"  style="padding-top: 10px;">
+
+    <div class="site-section bg-light" id="pm-form-section">
+      <div class="container">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-7 mb-5">
+
+            <form id="submit-to-google-sheet-pm" action="#" class="p-5 bg-white" onsubmit="this.elements['timestamp'].value= new Date()">
+              <h5 class="h5 text-black mb-5">Submit your contact info. We'll be in touch shortly.</h5> 
+              <input name="timestamp" type="hidden">
+              <!-- <input name="full_name" type="hidden">
+              <input name="phone_number" type="hidden"> -->
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">First Name</label>
+                  <input type="text" id="firstname" class="form-control rounded-0" name="first_name">
+                </div>
+
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="fname">Last Name</label>
+                  <input type="text" id="firstname" class="form-control rounded-0" name="last_name">
+                </div>
+
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label> 
+                  <input type="email" id="email" class="form-control rounded-0" name="email">
+                </div>
+              </div>
+
+              <div class="row form-group">  
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Phone Number</label> 
+                  <input type="subject" id="subject" class="form-control rounded-0" name="phone_number">
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <input type="submit" value="Submit" id="#pm-submit-form" class="btn btn-primary mr-2 mb-2">
+                  <!-- <div align="right"><font size="2">Payments processed through Stripe.</font></div> -->
+                </div>
+
+
+              </div>
+
+              <div id="pmResultDiv"></div>
+
+            </form>
+
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light" id="about-section"  style="padding-top: 50px;">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
@@ -390,8 +541,20 @@
         </div>
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <p class="mb-4">We are a small team of engineers based in San Francisco, CA. Our team consist of Stanford and Berkeley alumni who previously worked at LinkedIn, Dropbox, Tesla and Microsoft.</p>
+            <p class="mb-4">We are a small team of engineers based in San Francisco, CA. Our team consist of Berkeley and Stanford  alumni who previously worked at LinkedIn, Google and Airbnb. We are passionate about using technology to solve real world problems and improve the quality of life.</p>
+            <p>We built our camera's Smart Alert and Fast Query capabilities using state-of-the-art AI & Computer Vision technologies. We are hoping our technology can help make property management easier and neigborhoods safer.</p>
           </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- 
+<div class="site-section bg-light">
+      <div class="container">
+        <div class="mt-5 row mb-5 site-section" id="aboutus-section">
+
+          About us!
         </div>
       </div>
     </div> -->
@@ -412,8 +575,11 @@
         <div class="row">
           <div class="col-md-12">
             <p class="mb-0">
-              344 Brannan St, Suite #8, San Francisco, CA 94107 
+              <font size="2">344 Brannan St, Suite #8, San Francisco, CA 94107</font>
               <!-- &#9742: 415-238-5766 -->
+            </p>
+            <p class="mb-0">
+              <font size="2">Email: <u><i>contact@visualone.tech</i></u></font>
             </p>
           </div>
         </div>
@@ -423,7 +589,7 @@
           <div class="col-md-12">
             <p class="mb-0">
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;Visual One <script>document.write(new Date().getFullYear());</script>. All rights reserved.
+              <font size="2">Copyright &copy;Visual One <script>document.write(new Date().getFullYear());</script>. All rights reserved.</font>
 
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
@@ -453,157 +619,59 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+
+  <script src="js/google-sheet-pm.js"></script>
   <script src="js/google-sheet.js"></script>
   <script src="js/main.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <script>
+    function goToCheckOut() {
 
-    // $(document).ready(function(){
-    //   $("#paybtn").click(function(){
-    //     $.get("http://34.219.246.91:8081/test?test=4", function(data, status){
-    //       alert("Data: " + data + "\nStatus: " + status);
-    //     });
-    //   });
-    // });
+      var promo = document.getElementById('refer').value
 
+      $.get("http://34.219.246.91:8081/stripe?promo=" + promo, function(data){      
 
+        var stripe = Stripe('pk_live_9ol1fkJG7ysE8jOKUmA8HwAt006Q4ZOvuQ');
 
-    //     var HttpClient = function() {
-    // this.get = function(aUrl, aCallback) {
-    //     var anHttpRequest = new XMLHttpRequest();
-    //     anHttpRequest.onreadystatechange = function() { 
-    //         if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
-    //             aCallback(anHttpRequest.responseText);
-    //     }
-
-    //     anHttpRequest.open( "GET", aUrl, true );            
-    //     anHttpRequest.send( null );
-    //   }
-    // }
-
-    // var client = new HttpClient();
-    // client.get('http://34.219.246.91:8081/stripe?test=3', function(response) {
-    //     // do something with response
-    //     alert(response)
-    // });
-
-
-
-
-  function goToCheckOut() {
-
-
-
-
-
-    // window.location.replace("http://www.w3schools.com");
-
-
-    // $.ajax({
-    //   url: "http://34.219.246.91:8081/stripe?test=3",
-    //   // beforeSend: function(xhr) { 
-    //   //   xhr.setRequestHeader("Authorization", "Basic " + btoa("username:password")); 
-    //   // },
-    //   type: 'GET',
-    //   // dataType: 'json',
-    //   // contentType: 'application/json',
-    //   // processData: false,
-    //   // data: '{"foo":"bar"}',
-    //   success: function (data) {
-    //     alert(data);
-    //   },
-    //   error: function(){
-    //     alert("Cannot get data");
-    //   }
-    // });
-
-
-    // $.ajax({
-    //     type: "GET",
-    //     url: "http://34.219.246.91:8081/stripe",
-    //     crossDomain: true,
-    //     data: 'param1=value1&param2=value2',
-    //     success: function (data) {
-    //         // do something with server response data
-    //         alert(data);
-    //     },
-    //     error: function (err) {
-    //         // handle your error logic here
-    //         alert("Cannot get data " + err);
-    //     }
-    // });
-
-
-
-    $.get("http://34.219.246.91:8081/stripe?test=2", function(data, status){
-      alert("Data: " + data + "\nStatus: " + status);
-      console.log(data)
-
-
-      var stripe = Stripe('pk_live_9ol1fkJG7ysE8jOKUmA8HwAt006Q4ZOvuQ');
-
-      stripe.redirectToCheckout({
-      // Make the id field from the Checkout Session creation API response
-      // available to this file, so you can provide it as parameter here
-      // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
-      sessionId: data
-      }).then(function (result) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer
-        // using `result.error.message`.
+        stripe.redirectToCheckout({
+        // Make the id field from the Checkout Session creation API response
+        // available to this file, so you can provide it as parameter here
+        // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+        sessionId: data['session_id']
+        }).then(function (result) {
+          // If `redirectToCheckout` fails due to a browser or network
+          // error, display the localized error message to your customer
+          // using `result.error.message`.
+        });
       });
-    });
 
 
-    // var xmlHttp = new XMLHttpRequest();
-    // xmlHttp.open( "GET", "http://www.yahoo.com", true ); // false for synchronous request
-    // xmlHttp.send( null );
-
-    // alert(xmlHttp.responseText);
-
-    // alert("testing");
-
-    // alert(session_id);
+    }
+  </script>
 
 
+  <script>
 
-      // var stripe = Stripe('pk_live_9ol1fkJG7ysE8jOKUmA8HwAt006Q4ZOvuQ');
+    window.onload = function() {
+      closeForm('contact-section');
+      closeForm('pm-form-section');
+    };
 
-      // stripe.redirectToCheckout({
-      // // Make the id field from the Checkout Session creation API response
-      // // available to this file, so you can provide it as parameter here
-      // // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
-      // sessionId: data
-      // }).then(function (result) {
-      //   // If `redirectToCheckout` fails due to a browser or network
-      //   // error, display the localized error message to your customer
-      //   // using `result.error.message`.
-      // });
-    
+    function openForm(formId) {
+      document.getElementById(formId).style.display = "block";
 
+      var elmnt = document.getElementById(formId);
+      elmnt.scrollIntoView();
 
-  }
-  
+    }
+
+    function closeForm(formId) {
+      document.getElementById(formId).style.display = "none";
+    }
 </script>
 
-  <!-- <script type="text/javascript">
-    var $form = $('form#submit-to-google-sheet'),
-    url = 'https://script.google.com/macros/s/AKfycbyusaxv27k4LEHR0lGODdqG2eXdLwa8O_kf_0MCpvtH16O0Fqs/exec'
-
-    $('#submit-form').on('click', function(e) {
-      e.preventDefault();
-      var jqxhr = $.ajax({
-        url: url,
-        method: "GET",
-        dataType: "json",
-        data: $form.serializeObject()
-      }).success(
-        // do something
-      );
-    })
-  </script> -->
     
   </body>
 </html>
