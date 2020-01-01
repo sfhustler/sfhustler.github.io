@@ -198,7 +198,7 @@
               </div>
               <div>
                 <h3>Fire Detected</h3>
-                <p>Get an alert when a bonfire is detected on your property.</p>
+                <p>Get an alert when a bonfire is detected at your property.</p>
               </div>
             </div>
           </div>
@@ -289,8 +289,8 @@
             <h2 class="text-black">How It Works</h2>
             <ul class="list-unstyled">
               <ul>
-              <li>We will send you a camera to install outside your property.</li><br>
-              <li>You can create smart custom alerts in the mobile app for things that matter to you.</li><br>
+              <li>We will send you a camera to install at your property.</li><br>
+              <li>You can create smart custom alerts in our mobile app for things that matter to you.</li><br>
               <li>Our proprietry algorithms process the video feed in real time and notify you as soon as any of the events you care about occurs.</li><br>
               <!-- <li>No outlets available? No problem! Our cameras work with rechargable batteries.</li><br> -->
             </ul>
@@ -320,7 +320,7 @@
 
 
           <div class="col-md-12" align="center" style="padding-top: 50px;">
-              Volume discounts available.<br>
+              Volume discount available.<br>
               <font size="5" style="font-weight:bold;">Are you a property manager?</font><br>
               <font size="4" style="font-weight:bold;">
                 <a href="#pm-form-section" onclick="openForm('pm-form-section')">Request a quote/demo today!</a>
@@ -541,8 +541,8 @@
         </div>
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <p class="mb-4">We are a small team of engineers based in San Francisco, CA. Our team consist of Berkeley and Stanford  alumni who previously worked at LinkedIn, Google and Airbnb. We are passionate about using technology to solve real world problems and improve the quality of life.</p>
-            <p>We built our camera's Smart Alert and Fast Query capabilities using state-of-the-art AI & Computer Vision technologies. We are hoping our technology can help make property management easier and neigborhoods safer.</p>
+            <p class="mb-4">We are a small team of engineers based in San Francisco, CA. Our team consists of UC-Berkeley and Stanford alumni who previously worked at LinkedIn, Google and Airbnb. We are passionate about using technology to solve real world problems and improve the quality of life.</p>
+            <p>We built our Smart Alert and Fast Query technologies using state-of-the-art AI & Computer Vision and are hoping our technology can help make property management easier and neigborhoods safer.</p>
           </div>
         </div>
       </div>
@@ -631,7 +631,10 @@
 
       var promo = document.getElementById('refer').value
 
-      $.get("http://34.219.246.91:8081/stripe?promo=" + promo, function(data){      
+      $.get("http://34.219.246.91:8081/stripe?promo=" + promo, function(data){   
+
+          console.log("The session id is: ");
+         console.log(data['session_id']);
 
         var stripe = Stripe('pk_live_9ol1fkJG7ysE8jOKUmA8HwAt006Q4ZOvuQ');
 
