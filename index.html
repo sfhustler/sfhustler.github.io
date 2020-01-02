@@ -631,18 +631,34 @@
 
       var promo = document.getElementById('refer').value
 
-      $.get("https://34.219.246.91:8081/stripe?promo=" + promo, function(data){   
+      // $.get("https://34.219.246.91:8081/stripe?promo=" + promo, function(data){   
 
-          console.log("The session id is: ");
-         console.log(data['session_id']);
+      //     console.log("The session id is: ");
+      //    console.log(data['session_id']);
 
-        var stripe = Stripe('pk_live_9ol1fkJG7ysE8jOKUmA8HwAt006Q4ZOvuQ');
+      //   var stripe = Stripe('pk_live_9ol1fkJG7ysE8jOKUmA8HwAt006Q4ZOvuQ');
+
+      //   stripe.redirectToCheckout({
+      //   // Make the id field from the Checkout Session creation API response
+      //   // available to this file, so you can provide it as parameter here
+      //   // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+      //   sessionId: data['session_id']
+      //   }).then(function (result) {
+      //     // If `redirectToCheckout` fails due to a browser or network
+      //     // error, display the localized error message to your customer
+      //     // using `result.error.message`.
+      //     console.log("Error: ");
+      //     console.log(result.error.message);
+      //   });
+      // });
+
+      var stripe = Stripe('pk_live_9ol1fkJG7ysE8jOKUmA8HwAt006Q4ZOvuQ');
 
         stripe.redirectToCheckout({
         // Make the id field from the Checkout Session creation API response
         // available to this file, so you can provide it as parameter here
         // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
-        sessionId: data['session_id']
+        sessionId: 'cs_live_OiBENmOBxcqbqKYFYrewGXRP7CfZLs1BpXolyODMeGajEvnMcbEicdat'
         }).then(function (result) {
           // If `redirectToCheckout` fails due to a browser or network
           // error, display the localized error message to your customer
@@ -650,7 +666,7 @@
           console.log("Error: ");
           console.log(result.error.message);
         });
-      });
+      
 
 
     }
