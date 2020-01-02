@@ -541,7 +541,7 @@
         </div>
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <p class="mb-4">We are a small team of engineers based in San Francisco, CA. Our team consists of UC-Berkeley and Stanford alumni who previously worked at LinkedIn, Google and Airbnb. We are passionate about using technology to solve real world problems and improve the quality of life.</p>
+            <p class="mb-4">We are a small team of engineers based in San Francisco, CA. Our team consists of UC-Berkeley and Stanford alumni who previously worked at LinkedIn, Google and Airbnb. We are passionate about using technology to solve real world problems and improve the people's lives.</p>
             <p>We built our Smart Alert and Fast Query technologies using state-of-the-art AI & Computer Vision and are hoping our technology can help make property management easier and neigborhoods safer.</p>
           </div>
         </div>
@@ -631,7 +631,7 @@
 
       var promo = document.getElementById('refer').value
 
-      $.get("http://34.219.246.91:8081/stripe?promo=" + promo, function(data){   
+      $.get("https://34.219.246.91:8081/stripe?promo=" + promo, function(data){   
 
           console.log("The session id is: ");
          console.log(data['session_id']);
