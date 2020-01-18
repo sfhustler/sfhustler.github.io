@@ -184,7 +184,7 @@
                 <span class="icon-wrap"><span class="text-primary icon-tag_faces"></span></span>
               </div>
               <div>
-                <h3>Specific Persons</h3>
+                <h3>Specific Person</h3>
                 <p>Get an alert when a specific person shows up to your property.</p>
               </div>
             </div>
@@ -635,7 +635,9 @@
 
       var promo = document.getElementById('refer').value
 
-      $.get("http://34.219.246.91:8081/stripe?promo=" + promo, function(data){   
+      // $.get("http://34.219.246.91:8081/stripe?promo=" + promo, function(data){   
+
+      $.get("https://getvisualone.com/stripe?promo=" + promo, function(data){   
 
           console.log("The session id is: ");
          console.log(data['session_id']);
