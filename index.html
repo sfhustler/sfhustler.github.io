@@ -663,7 +663,8 @@
 
       // $.get("http://34.219.246.91:8081/stripe?promo=" + promo, function(data){   
 
-      $.get("https://getvisualone.com/stripe?promo=" + promo + "&quantity=" + quantity, function(data){   
+      // $.get("https://getvisualone.com/stripe?promo=" + promo + "&quantity=" + quantity, function(data){   
+      $.get("https://gpu-machine-lb-740964810.us-west-2.elb.amazonaws.com/stripe?promo=" + promo + "&quantity=" + quantity, function(data){   
 
           console.log("The session id is: ");
          console.log(data['session_id']);
